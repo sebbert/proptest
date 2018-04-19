@@ -26,7 +26,8 @@
   ],
   "dependencies": {
     "json-stringify-pretty-compact": "^1.1.0",
-    "random-js": "^1.0.8"
+    "random-js": "^1.0.8",
+    "@types/random-js": "^1.0.30"
   },
   "devDependencies": {
     "@types/node": "^9.4.6",
@@ -43,7 +44,8 @@
     "prettier": "prettier --list-different --write \"{src,test}/**/*.ts\"",
     "prepare": "tsc",
     "prepublishOnly": "tsc",
-    "test": "ts-node node_modules/tape/bin/tape test/*.ts | tap-spec"
+    "test": "ts-node node_modules/tape/bin/tape test/*.ts | tap-spec",
+    "postinstall": "npm run build"
   },
   "prettier": {
     "printWidth": 100,
