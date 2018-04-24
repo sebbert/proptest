@@ -39,10 +39,10 @@
     "typescript": "^2.7.2"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "echo BUILD && tsc --traceResolution",
     "prettier": "prettier --list-different --write \"{src,test}/**/*.ts\"",
-    "prepare": "tsc",
-    "prepublishOnly": "tsc",
+    "prepare": "echo PREPARE && tsc --traceResolution",
+    "prepublishOnly": "echo PREPUBLISHONLY && tsc --traceResolution",
     "test": "ts-node node_modules/tape/bin/tape test/*.ts | tap-spec"
   },
   "prettier": {
